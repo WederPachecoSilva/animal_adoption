@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:animal_adoption/constants.dart';
 import 'package:animal_adoption/screens/animals_menu_screen/animals_menu_screen.dart';
 import 'package:animal_adoption/widgets/main_app_bar.dart';
-import 'bottom_nav_bar.dart';
+import '../../widgets/bottom_nav_bar.dart';
 
 class MainScreen extends StatefulWidget {
   static final routeName = 'main-screen';

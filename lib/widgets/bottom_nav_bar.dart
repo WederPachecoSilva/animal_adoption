@@ -8,7 +8,7 @@ class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
     Key key,
     @required this.changeSelectedTabIndex,
-    @required this.selectedTabIndex,
+    this.selectedTabIndex = 0,
   }) : super(key: key);
 
   void _onItemTapped(i) => changeSelectedTabIndex(i);
@@ -16,23 +16,27 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 78,
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
-          offset: Offset(30, 20),
-          color: Colors.grey[200],
+          // offset: Offset(30, 20),
+          color: Colors.grey[900],
           blurRadius: 100,
         )
       ]),
       child: BottomNavigationBar(
+        selectedLabelStyle: TextStyle(fontSize: 22),
+        iconSize: 27,
+        type: BottomNavigationBarType.fixed,
         unselectedItemColor: Colors.grey[300],
         backgroundColor: Constants.primaryColor,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             label: '.',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.access_alarm_outlined),
+            icon: Icon(Icons.military_tech_outlined),
             label: '.',
           ),
           BottomNavigationBarItem(
@@ -40,7 +44,7 @@ class BottomNavBar extends StatelessWidget {
             label: '.',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_box_outlined),
+            icon: Icon(Icons.person_outlined),
             label: '.',
           ),
         ],
